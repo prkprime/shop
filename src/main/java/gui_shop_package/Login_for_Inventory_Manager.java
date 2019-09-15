@@ -8,6 +8,13 @@ package gui_shop_package;
  *
  * @author admin
  */
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 public class Login_for_Inventory_Manager extends javax.swing.JFrame {
 
     /**
@@ -106,19 +113,51 @@ public class Login_for_Inventory_Manager extends javax.swing.JFrame {
     
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
-        String uname;
-        uname= tf1.getText();
-        String pad;
-        pad= tf2.getText();
-        if(uname.equals("ROOT") && pad.equals("PASSWORD"))
-            {
-            shop_gui_jframe shop =new shop_gui_jframe();
+         Statement stmt = null;
+        ResultSet rs = null;
+       try {
+        String username = new String(tf1.getText());
+        String password = new String(tf2.getPassword());
+       // Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shop", "root", "password");
+        stmt = conn.createStatement();
+        rs = stmt.executeQuery("Select * from managers where uname='"+username+"'");
+        int signed_in = 0;
+        while(rs.next()) {
+          if(password.equals(rs.getString("pword"))) {
+             shop_gui_jframe shop =new shop_gui_jframe();
             shop.setVisible(true);
-            }
-        else
-            {
-            System.out.print("INVALID OPTION");
-            }
+            signed_in=1;
+          }
+        }
+        if(signed_in==0) {
+          JOptionPane.showMessageDialog(null, "Incorrect credentials", "Alert", JOptionPane.INFORMATION_MESSAGE);
+        }
+        conn.close();
+      } catch(SQLException se) {
+        System.out.println("SQLException : "+se.getMessage());
+        System.out.println("SQLState: " + se.getSQLState());
+        System.out.println("VendorError: " + se.getErrorCode());
+      } catch(Exception e) {
+        System.out.println(e);
+      } finally {
+        if (rs!=null) {
+          try {
+            rs.close();
+          } catch(SQLException se) {
+            //do nothing
+          }
+          rs=null;
+        }
+        if (stmt!=null) {
+          try {
+            stmt.close();
+          } catch(SQLException se) {
+            //do nothing
+          }
+          stmt = null;
+        }
+      }
     }//GEN-LAST:event_button1ActionPerformed
 
     /**
