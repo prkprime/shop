@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package gui_shop_package;
-
 /**
  *
  * @author admin
@@ -31,9 +30,7 @@ public class Login_for_Inventory_Manager extends javax.swing.JFrame {
         L2 = new javax.swing.JLabel();
         tf1 = new javax.swing.JTextField();
         tf2 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        tf3 = new javax.swing.JTextField();
-        tf4 = new javax.swing.JPasswordField();
+        button1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,22 +50,10 @@ public class Login_for_Inventory_Manager extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("LOGIN IN");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        button1.setText("LOGIN IN");
+        button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        tf3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf3ActionPerformed(evt);
-            }
-        });
-
-        tf4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf4ActionPerformed(evt);
+                button1ActionPerformed(evt);
             }
         });
 
@@ -77,21 +62,19 @@ public class Login_for_Inventory_Manager extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(tf4)
                     .addComponent(L1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(L2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
-                    .addComponent(tf3, javax.swing.GroupLayout.Alignment.LEADING))
-                .addGap(34, 34, 34)
+                    .addComponent(L2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tf1)
-                    .addComponent(tf2, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
+                    .addComponent(tf2, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                    .addComponent(tf1))
+                .addGap(133, 133, 133))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(221, 221, 221)
+                .addComponent(button1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(184, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(139, 139, 139))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,17 +83,13 @@ public class Login_for_Inventory_Manager extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(L1)
                     .addComponent(tf1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(L2)
                     .addComponent(tf2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jButton1)
-                .addGap(32, 32, 32)
-                .addComponent(tf3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tf4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(button1)
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         pack();
@@ -124,19 +103,23 @@ public class Login_for_Inventory_Manager extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
-        tf3.setText(tf1.getText());
-        tf4.setText(tf2.getText());
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void tf4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf4ActionPerformed
-
-    private void tf3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf3ActionPerformed
+        String uname;
+        uname= tf1.getText();
+        String pad;
+        pad= tf2.getText();
+        if(uname.equals("ROOT") && pad.equals("PASSWORD"))
+            {
+            shop_gui_jframe shop =new shop_gui_jframe();
+            shop.setVisible(true);
+            }
+        else
+            {
+            System.out.print("INVALID OPTION");
+            }
+    }//GEN-LAST:event_button1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,16 +153,15 @@ public class Login_for_Inventory_Manager extends javax.swing.JFrame {
             public void run() {
                 new Login_for_Inventory_Manager().setVisible(true);
             }
+            
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel L1;
     private javax.swing.JLabel L2;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton button1;
     private javax.swing.JTextField tf1;
     private javax.swing.JPasswordField tf2;
-    private javax.swing.JTextField tf3;
-    private javax.swing.JPasswordField tf4;
     // End of variables declaration//GEN-END:variables
 }

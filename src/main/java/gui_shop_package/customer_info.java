@@ -37,10 +37,6 @@ public class customer_info extends javax.swing.JFrame {
         tf4 = new javax.swing.JTextField();
         button1 = new javax.swing.JButton();
         button2 = new javax.swing.JButton();
-        t1 = new javax.swing.JTextField();
-        t2 = new javax.swing.JTextField();
-        t3 = new javax.swing.JTextField();
-        t4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -99,16 +95,9 @@ public class customer_info extends javax.swing.JFrame {
                             .addComponent(tf4, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(button1)
-                                .addGap(57, 57, 57)
-                                .addComponent(button2))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(t4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                                .addComponent(t3, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(t1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(t2, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                        .addComponent(button1)
+                        .addGap(57, 57, 57)
+                        .addComponent(button2)))
                 .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -134,15 +123,7 @@ public class customer_info extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button1)
                     .addComponent(button2))
-                .addGap(50, 50, 50)
-                .addComponent(t1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(t2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(t3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(t4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(228, Short.MAX_VALUE))
         );
 
         pack();
@@ -158,11 +139,9 @@ public class customer_info extends javax.swing.JFrame {
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
            // TODO add your handling code here:
-           t1.setText(tf1.getText());
-           t2.setText(tf2.getText());
-           t3.setText(tf3.getText());
-           t4.setText(tf4.getText());
-           
+        
+            itembot ib =new itembot();
+            ib.setVisible(true);          
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
@@ -212,10 +191,6 @@ public class customer_info extends javax.swing.JFrame {
     private javax.swing.JLabel label2;
     private javax.swing.JLabel label3;
     private javax.swing.JLabel label4;
-    private javax.swing.JTextField t1;
-    private javax.swing.JTextField t2;
-    private javax.swing.JTextField t3;
-    private javax.swing.JTextField t4;
     private javax.swing.JTextField tf1;
     private javax.swing.JTextField tf2;
     private javax.swing.JTextField tf3;

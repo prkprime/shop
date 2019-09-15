@@ -32,8 +32,6 @@ public class Login_for_Sales_Manager extends javax.swing.JFrame {
         tf1 = new javax.swing.JTextField();
         tf2 = new javax.swing.JPasswordField();
         button1 = new javax.swing.JButton();
-        tf3 = new javax.swing.JTextField();
-        tf4 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,12 +58,6 @@ public class Login_for_Sales_Manager extends javax.swing.JFrame {
             }
         });
 
-        tf4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf4ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,18 +69,13 @@ public class Login_for_Sales_Manager extends javax.swing.JFrame {
                         .addComponent(button1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(L1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(L2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(80, 80, 80)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(tf1)
-                                    .addComponent(tf2, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(tf4, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tf3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(L1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(L2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf1)
+                            .addComponent(tf2, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -104,11 +91,7 @@ public class Login_for_Sales_Manager extends javax.swing.JFrame {
                     .addComponent(tf2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(button1)
-                .addGap(18, 18, 18)
-                .addComponent(tf3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(tf4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
 
         pack();
@@ -122,14 +105,21 @@ public class Login_for_Sales_Manager extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf2ActionPerformed
 
-    private void tf4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf4ActionPerformed
-
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
-        tf3.setText(tf1.getText());
-        tf4.setText(tf2.getText());
+         String uname;
+        uname= tf1.getText();
+        String pad;
+        pad= tf2.getText();
+        if(uname.equals("ROOT") && pad.equals("PASSWORD"))
+            {
+            customer_info cust =new customer_info();
+            cust.setVisible(true);
+            }
+        else
+            {
+            System.out.print("INVALID OPTION");
+            }
     }//GEN-LAST:event_button1ActionPerformed
 
     /**
@@ -173,7 +163,5 @@ public class Login_for_Sales_Manager extends javax.swing.JFrame {
     private javax.swing.JButton button1;
     private javax.swing.JTextField tf1;
     private javax.swing.JPasswordField tf2;
-    private javax.swing.JTextField tf3;
-    private javax.swing.JPasswordField tf4;
     // End of variables declaration//GEN-END:variables
 }
