@@ -29,18 +29,10 @@ public class shop_gui_jframe extends javax.swing.JFrame {
 
         label1 = new javax.swing.JLabel();
         button1 = new javax.swing.JButton();
-        label5 = new javax.swing.JLabel();
-        textfield5 = new javax.swing.JTextField();
         label2 = new javax.swing.JLabel();
         label3 = new javax.swing.JLabel();
         label4 = new javax.swing.JLabel();
         textfield4 = new javax.swing.JTextField();
-        label6 = new javax.swing.JLabel();
-        label7 = new javax.swing.JLabel();
-        label8 = new javax.swing.JLabel();
-        textfield6 = new javax.swing.JTextField();
-        textfield7 = new javax.swing.JTextField();
-        textfield8 = new javax.swing.JTextField();
         button2 = new javax.swing.JButton();
         cb1 = new javax.swing.JComboBox<>();
         cb2 = new javax.swing.JComboBox<>();
@@ -57,25 +49,11 @@ public class shop_gui_jframe extends javax.swing.JFrame {
             }
         });
 
-        label5.setText("The item name you entered was:");
-
         label2.setText("Enter the Manufacturer");
 
         label3.setText("Enter the model name");
 
         label4.setText("Enter the quantity");
-
-        label6.setText("The manufacturer you entered was:");
-
-        label7.setText("The model you entered was:");
-
-        label8.setText("The quantity you entered was:");
-
-        textfield7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfield7ActionPerformed(evt);
-            }
-        });
 
         button2.setText("EXIT");
         button2.addActionListener(new java.awt.event.ActionListener() {
@@ -101,20 +79,12 @@ public class shop_gui_jframe extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(label1)
                             .addComponent(label2)
-                            .addComponent(label6)
-                            .addComponent(label7)
-                            .addComponent(label8)
                             .addComponent(label3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(label5, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                            .addComponent(label4, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(textfield5, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
                             .addComponent(textfield4)
-                            .addComponent(textfield6)
-                            .addComponent(textfield7)
-                            .addComponent(textfield8)
-                            .addComponent(cb3, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cb3, javax.swing.GroupLayout.Alignment.TRAILING, 0, 129, Short.MAX_VALUE)
                             .addComponent(cb2, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cb1, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
@@ -147,23 +117,7 @@ public class shop_gui_jframe extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button1)
                     .addComponent(button2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label5)
-                    .addComponent(textfield5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(label6)
-                    .addComponent(textfield6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label7)
-                    .addComponent(textfield7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label8)
-                    .addComponent(textfield8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(75, 75, 75))
+                .addContainerGap(235, Short.MAX_VALUE))
         );
 
         pack();
@@ -171,20 +125,13 @@ public class shop_gui_jframe extends javax.swing.JFrame {
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
         // TODO add your handling code here:
-        textfield5.setText(cb1.getSelectedItem().toString());
-        textfield6.setText(cb2.getSelectedItem().toString());
-        textfield7.setText(cb3.getSelectedItem().toString());
-        textfield8.setText(textfield4.getText());
+        //button k yaha daal tera code
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
         // TODO add your handling code here:
        System.exit(0);
     }//GEN-LAST:event_button2ActionPerformed
-
-    private void textfield7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textfield7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,14 +176,6 @@ public class shop_gui_jframe extends javax.swing.JFrame {
     private javax.swing.JLabel label2;
     private javax.swing.JLabel label3;
     private javax.swing.JLabel label4;
-    private javax.swing.JLabel label5;
-    private javax.swing.JLabel label6;
-    private javax.swing.JLabel label7;
-    private javax.swing.JLabel label8;
     private javax.swing.JTextField textfield4;
-    private javax.swing.JTextField textfield5;
-    private javax.swing.JTextField textfield6;
-    private javax.swing.JTextField textfield7;
-    private javax.swing.JTextField textfield8;
     // End of variables declaration//GEN-END:variables
 }
